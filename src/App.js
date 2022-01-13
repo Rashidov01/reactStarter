@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
 function App() {
+  const [userInput, setUserInput] = useState("");
+  const b = '';
+  const inputChanger = (e) => {
+    setUserInput(e.target.value);
+    console.log(userInput);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1 value={b}>Hello world { userInput }</h1>
+      <textarea value={userInput} onChange={inputChanger} cols="30" rows="10" placeholder="write smth here"></textarea>
+
+      <button onClick={() => setUserInput('')}>clear</button>
+    </>
   );
 }
 
