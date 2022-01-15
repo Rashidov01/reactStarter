@@ -11,7 +11,7 @@ function App() {
     <>
       <h1 value={b}>Hello world { userInput }</h1>
       <textarea value={userInput} onChange={inputChanger} cols="30" rows="10" placeholder="write smth here"></textarea>
-
+      <h1></h1>
       <button onClick={() => setUserInput('')}>clear</button>
     </>
   );
